@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Root element -->
+  <xs:element name="people">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="person" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="firstname" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="lastname" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="phone" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="mobile" type="xs:string" minOccurs="0"/>
+                    <xs:element name="home" type="xs:string" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="address" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="street" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="city" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="zipcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="family" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="born" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="phone" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="mobile" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="home" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="address" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="street" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="city" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="zipcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
